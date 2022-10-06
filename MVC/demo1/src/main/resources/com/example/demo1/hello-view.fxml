@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="793.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+    <children>
+        <Pane prefHeight="793.0" prefWidth="200.0" style="-fx-background-color: #9381FF;">
+            <children>
+                <Button fx:id="idBtnPerson" layoutX="14.0" layoutY="134.0" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="175.0" text="Person" />
+                <Button fx:id="idBtnGoodbye" layoutX="14.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="175.0" text="Online Courses" />
+                <Button fx:id="idBtnOnsiteCourse" layoutX="14.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="175.0" text="Onsite Courses" />
+                <Button fx:id="idBtnCourseIntructor" layoutX="14.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="175.0" text="Course Intructor" />
+                <Button fx:id="idBtnStudentGrade" layoutX="14.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="175.0" text="Student Grade" />
+            </children>
+        </Pane>
+        <Pane layoutX="200.0" prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: #042343;">
+            <children>
+                <Label fx:id="welcomeText" alignment="CENTER" prefHeight="100.0" prefWidth="918.0" textAlignment="CENTER">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop color="#c4f1be12" />
+                                <Stop color="WHITE" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <Label fx:id="idLBNotification" alignment="CENTER" contentDisplay="CENTER" layoutX="925.0" prefHeight="100.0" prefWidth="175.0" text="notification" textAlignment="CENTER" textFill="WHITE" />
+            </children>
+        </Pane>
+        <AnchorPane layoutX="200.0" layoutY="90.0" prefHeight="702.0" prefWidth="1100.0">
+            <children>
+                <Pane fx:id="idPanePerson" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: B1E1FF;">
+                    <children>
+                        <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="ID" textAlignment="CENTER" />
+                        <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Hire Date" textAlignment="CENTER" />
+                        <Label layoutX="50.0" layoutY="170.0" prefHeight="31.0" prefWidth="200.0" text="First name" textAlignment="CENTER" />
+                        <Label layoutX="350.0" layoutY="170.0" prefHeight="31.0" prefWidth="200.0" text="Last Name" textAlignment="CENTER" />
+                        <Label layoutX="50.0" layoutY="270.0" prefHeight="31.0" prefWidth="200.0" text="Enrollment Date" textAlignment="CENTER" />
+                        <TextField fx:id="idTFIDPerson" layoutX="50.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="idTFHireDatePerson" layoutX="350.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="idTFFNamePerson" layoutX="50.0" layoutY="200.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="idTFLNamePerson" layoutX="350.0" layoutY="200.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="idTFDayPerson" layoutX="50.0" layoutY="300.0" prefHeight="31.0" prefWidth="200.0" />
+
+                        <ListView fx:id="idLVPerson" layoutX="693.0" layoutY="28.0" prefHeight="461.0" prefWidth="407.0" />
+
+                        <Button layoutX="25.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleInsertPerson" prefHeight="40.0" prefWidth="100.0" text="Insert" />
+                        <Button layoutX="150.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleUpdatePerson" prefHeight="40.0" prefWidth="100.0" text="Update" />
+                        <Button layoutX="275.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleDeletePerson" prefHeight="40.0" prefWidth="100.0" text="Delete" />
+                        <TextField fx:id="idTFFindPerson" layoutX="693.0" layoutY="540.0" prefHeight="31.0" prefWidth="200.0" />
+                        <Button layoutX="900.0" layoutY="540.0" mnemonicParsing="false" onAction="#searchPerson" prefHeight="31.0" text="search by name" />
+                    </children>
+                </Pane>
+                <Pane fx:id="idPaneGoodbye" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #633A82;">
+                    <children>
+                        <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="URL" textAlignment="CENTER" />
+                        <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="ID Course" textAlignment="CENTER" />
+                        <ComboBox fx:id="idCBCourseIDOLine" layoutX="350.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="idTFURLOLine" layoutX="50.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <ListView fx:id="idLVOLine" layoutX="693.0" layoutY="28.0" prefHeight="461.0" prefWidth="407.0" />
+                        <Button fx:id="idBtnInsetOLine" layoutX="25.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleInsertOLite" prefHeight="40.0" prefWidth="100.0" text="Insert" />
+                        <Button fx:id="idBtnUpdateOLine" layoutX="150.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleUpdateOLite" prefHeight="40.0" prefWidth="100.0" text="Update" />
+                        <Button fx:id="idBtnDeleteOLine" layoutX="275.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleDeleteOLite" prefHeight="40.0" prefWidth="100.0" text="Delete" />
+                    </children>
+                </Pane>
+                <Pane fx:id="idPaneOnsite" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #912F56;">
+                    <children>
+                        <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="ID Course" textAlignment="CENTER" />
+                        <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Location" textAlignment="CENTER" />
+                        <Label layoutX="50.0" layoutY="170.0" prefHeight="31.0" prefWidth="200.0" text="Day" textAlignment="CENTER" />
+                        <Label layoutX="350.0" layoutY="170.0" prefHeight="31.0" prefWidth="200.0" text="Time" textAlignment="CENTER" />
+                        <ComboBox fx:id="idCBCourseOSite" layoutX="50.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="idTFLocationOSite" layoutX="350.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="idTFDayOSite" layoutX="50.0" layoutY="200.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="idTFTimeOSite" layoutX="350.0" layoutY="200.0" prefHeight="31.0" prefWidth="200.0" />
+                        <ListView fx:id="idLVOSite" layoutX="693.0" layoutY="28.0" prefHeight="461.0" prefWidth="407.0" />
+                        <Button fx:id="idBtnInsertOSite" layoutX="25.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleInsertOSite" prefHeight="40.0" prefWidth="100.0" text="Insert" />
+                        <Button fx:id="idBtnUpdateOSite" layoutX="150.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleUpdateOSite" prefHeight="40.0" prefWidth="100.0" text="Update" />
+                        <Button fx:id="idBtnDeleteOSite" layoutX="275.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleDeleteOSite" prefHeight="40.0" prefWidth="100.0" text="Delete" />
+                        <TextField fx:id="idTFSearchLocation" layoutX="693.0" layoutY="540.0" prefHeight="31.0" prefWidth="200.0" />
+                        <Button layoutX="900.0" layoutY="540.0" mnemonicParsing="false" onAction="#searchLocation" prefHeight="31.0" text="search by location" />
+                        <TextField fx:id="idTFSearchDay" layoutX="693.0" layoutY="600.0" prefHeight="31.0" prefWidth="200.0" />
+                        <Button layoutX="900.0" layoutY="600.0" mnemonicParsing="false" onAction="#searchDay" prefHeight="31.0" text="search by day" />
+                    </children>
+                </Pane>
+                <Pane fx:id="idPaneIntructor" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #521945;">
+                    <children>
+                        <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Title Course" textAlignment="CENTER" />
+                        <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Name Person" textAlignment="CENTER" />
+                        <ComboBox fx:id="idCBCourseCI" layoutX="350.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <ComboBox fx:id="idCBNameCI" layoutX="50.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <ListView fx:id="idLVCourseIntructorCI" layoutX="693.0" layoutY="28.0" prefHeight="461.0" prefWidth="407.0" />
+                        <Button fx:id="idBtnInsertCI" layoutX="25.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleInsertCI" prefHeight="40.0" prefWidth="100.0" text="Insert" />
+                        <Button fx:id="idBtnUpdateCI" layoutX="150.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleUpdateCI" prefHeight="40.0" prefWidth="100.0" text="Update" />
+                        <Button fx:id="idBtnDeleteCI" layoutX="275.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleDeleteCI" prefHeight="40.0" prefWidth="100.0" text="Delete" />
+                    </children>
+                </Pane>
+                <Pane fx:id="idPaneGrade" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #361F27;">
+                    <children>
+                        <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Title Course" textAlignment="CENTER" />
+                        <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Name Person" textAlignment="CENTER" />
+                        <Label layoutX="50.0" layoutY="270.0" prefHeight="31.0" prefWidth="200.0" text="Grade" textAlignment="CENTER" />
+                        <ComboBox fx:id="idCBNameSGM" layoutX="350.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <ComboBox fx:id="idCBTitleSGM" layoutX="50.0" layoutY="100.0" prefHeight="31.0" prefWidth="200.0" />
+                        <ListView fx:id="idLVStudentGrade" layoutX="693.0" layoutY="28.0" prefHeight="461.0" prefWidth="407.0" />
+                        <TextField fx:id="idTFGradeSGM" layoutX="50.0" layoutY="300.0" prefHeight="39.0" prefWidth="200.0" />
+                        <Button fx:id="idBtnInsertSGM" layoutX="25.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleInsertSGM" prefHeight="40.0" prefWidth="100.0" text="Insert" />
+                        <Button fx:id="idBtnUpdateSGM" layoutX="150.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleUpdateSGM" prefHeight="40.0" prefWidth="100.0" text="Update" />
+                        <Button fx:id="idBtnDeleteSGM" layoutX="275.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleDeleteSGM" prefHeight="40.0" prefWidth="100.0" text="Delete" />
+                    </children>
+                </Pane>
+                <Pane prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #EAF2EF;" />
+            </children>
+        </AnchorPane>
+    </children>
+</Pane>
