@@ -21,8 +21,11 @@ public class PersonBLL {
                 String date = person.getEnrollmentDate()+" 20:13:04";
                 LocalDateTime dateTime = LocalDateTime.parse(date,formatter);
             }
-            personDAL.insertPerson(person);
-            return true;
+            if(personDAL.insertPerson(person)==1){
+                return true;
+            }
+            else
+                return false;
         }catch (DateTimeParseException e){
             return false;
         }
@@ -39,8 +42,10 @@ public class PersonBLL {
                 String date = person.getEnrollmentDate()+" 20:13:04";
                 LocalDateTime dateTime = LocalDateTime.parse(date,formatter);
             }
-            personDAL.updatePerson(person);
-            return true;
+            if(personDAL.updatePerson(person)==1)
+                return true;
+            else
+                return false;
         }catch (DateTimeParseException e){
             return false;
         }

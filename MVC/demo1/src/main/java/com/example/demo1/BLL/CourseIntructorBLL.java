@@ -6,12 +6,16 @@ import com.example.demo1.models.CourseInstructor;
 public class CourseIntructorBLL {
     CourseInstructorDAL courseInstructorDAL = new CourseInstructorDAL();
     public boolean checkInsert(CourseInstructor courseInstructor){
-        courseInstructorDAL.insertCourseInstructor(courseInstructor);
-        return true;
+        if(courseInstructorDAL.insertCourseInstructor(courseInstructor)==1)
+            return true;
+        else
+            return false;
     }
     public boolean checkUpdate(CourseInstructor oldCourseInstructor, CourseInstructor newCourseInstructor){
-        courseInstructorDAL.updateCourseInstructor(oldCourseInstructor, newCourseInstructor);
-        return true;
+        if(courseInstructorDAL.updateCourseInstructor(oldCourseInstructor, newCourseInstructor)==1)
+            return true;
+        else
+            return false;
     }
     public boolean checkDelete(CourseInstructor courseInstructor){
         courseInstructorDAL.deleteCourseInstructor(courseInstructor);

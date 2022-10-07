@@ -327,11 +327,10 @@ public class HelloController {
 
     @FXML
     protected void handleInsertOSite(ActionEvent event) {
-        int id = onsiteCourses.get(idCBCourseOSite.getSelectionModel().getSelectedIndex()).getCourseID();
+        int id = Integer.parseInt(idCBCourseOSite.getSelectionModel().getSelectedItem());
         String location = idTFLocationOSite.getText();
         String day = idTFDayOSite.getText();
         String time = idTFTimeOSite.getText();
-//        System.out.println(id+location+day+time);
         OnsiteCourse onsiteCourse = new OnsiteCourse(id, location, day, time);
         if(onsiteCourseBLL.checkInsert(onsiteCourse)){
             idLBNotification.setText("Insert Onsite Course success");
@@ -339,12 +338,13 @@ public class HelloController {
         else {
             idLBNotification.setText("Insert Onsite Course fail");
         }
+
 //        onsiteCourseDAL.insertOnsiteCourse(onsiteCourse);
     }
 
     @FXML
     protected void handleUpdateOSite(ActionEvent event) {
-        int id = onsiteCourses.get(idCBCourseOSite.getSelectionModel().getSelectedIndex()).getCourseID();
+        int id = Integer.parseInt(idCBCourseOSite.getSelectionModel().getSelectedItem());
         String location = idTFLocationOSite.getText();
         String day = idTFDayOSite.getText();
         String time = idTFTimeOSite.getText();
@@ -360,7 +360,7 @@ public class HelloController {
 
     @FXML
     protected void handleDeleteOSite(ActionEvent event) {
-        int id = onsiteCourses.get(idCBCourseOSite.getSelectionModel().getSelectedIndex()).getCourseID();
+        int id = Integer.parseInt(idCBCourseOSite.getSelectionModel().getSelectedItem());
 //        onsiteCourseDAL.deleteOnsiteCourse(id);
         if(onsiteCourseBLL.checkDelete(id)){
             idLBNotification.setText("Delete Onsite Course success");
@@ -397,11 +397,12 @@ public class HelloController {
         int id = courses.get(idCBCourseIDOLine.getSelectionModel().getSelectedIndex()).getCourseID();
         String url = idTFURLOLine.getText();
         OnlineCourse onlineCourse = new OnlineCourse(id, url);
-        onlineCourseDAL.insertOnlineCourse(onlineCourse);
+//        onlineCourseDAL.insertOnlineCourse(onlineCourse);
+        System.out.println(id+url);
         if (onlineCourseBLL.checkInsert(onlineCourse)){
             idLBNotification.setText("Insert Online Course success");
         }else {
-            idLBNotification.setText("Insert Online Course fail");
+            idLBNotification.setText("the course already exists");
         }
     }
 
@@ -489,7 +490,7 @@ public class HelloController {
         person.setHireDate(hireDay);
         person.setEnrollmentDate(eDay);
         System.out.println(id);
-        if(personBLL.checkInsert(person)){
+        if(personBLL.checkUpdate(person)){
             idLBNotification.setText("Update Person success");
         }else {
             idLBNotification.setText("Update Person fail");

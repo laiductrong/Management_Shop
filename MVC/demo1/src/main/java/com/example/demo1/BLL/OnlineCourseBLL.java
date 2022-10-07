@@ -6,12 +6,19 @@ import com.example.demo1.models.OnlineCourse;
 public class OnlineCourseBLL {
     OnlineCourseDAL onlineCourseDAL = new OnlineCourseDAL();
     public boolean checkInsert (OnlineCourse onlineCourse){
-        onlineCourseDAL.insertOnlineCourse(onlineCourse);
-        return true;
+        if(onlineCourseDAL.insertOnlineCourse(onlineCourse)==1)
+            return true;
+        else
+            return false;
     }
     public boolean checkUpdate(OnlineCourse onlineCourse){
-        onlineCourseDAL.updateOnlineCourse(onlineCourse);
-        return true;
+        if(onlineCourse.getUrl().equals("")){
+            return false;
+        }
+        else if(onlineCourseDAL.updateOnlineCourse(onlineCourse)==1){
+            return true;
+        }
+        return false;
     }
     public boolean checkDelete(Integer idDelete){
         onlineCourseDAL.deleteOnlineCourse(idDelete);

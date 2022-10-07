@@ -140,7 +140,7 @@ public class OnsiteCourseDAL extends ConnectionDB {
 
     public static void main(String[] args) {
         OnsiteCourseDAL onsiteCourseDAL = new OnsiteCourseDAL();
-        OnsiteCourse onsiteCourse = new OnsiteCourse(5555, "Location change", "DAYS", "14:22:00");
+        OnsiteCourse onsiteCourse = new OnsiteCourse(3141, "dsad", "TH", "11:15:00");
 //        onsiteCourseDAL.getOnsiteCourse();
 //        onsiteCourseDAL.insertOnsiteCourse(onsiteCourse);
 //        onsiteCourseDAL.deleteOnsiteCourse(onsiteCourse.getCourseID());

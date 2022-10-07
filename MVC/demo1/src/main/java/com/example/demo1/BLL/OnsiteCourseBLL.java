@@ -9,10 +9,16 @@ public class OnsiteCourseBLL {
     //Time: 13:15:00
     OnsiteCourseDAL onsiteCourseDAL = new OnsiteCourseDAL();
     public boolean checkInsert(OnsiteCourse onsiteCourse){
+//        OnsiteCourse onsiteCourse2 = new OnsiteCourse(3141, "dsad", "TH", "11:15:00");
         try{
-            LocalTime myObj = LocalTime.parse(onsiteCourse.getTime());
-            onsiteCourseDAL.insertOnsiteCourse(onsiteCourse);
-            return true;
+            if(!onsiteCourse.getTime().equals(""))
+            {
+                LocalTime myObj = LocalTime.parse(onsiteCourse.getTime());
+            }
+            if(onsiteCourseDAL.insertOnsiteCourse(onsiteCourse)==1)
+                return true;
+            else
+                return false;
         }catch (Exception e){
             return false;
         }
@@ -20,9 +26,14 @@ public class OnsiteCourseBLL {
     }
     public boolean checkUpdate (OnsiteCourse onsiteCourse){
         try{
-            LocalTime myObj = LocalTime.parse(onsiteCourse.getTime());
-            onsiteCourseDAL.updateOnsiteCourse(onsiteCourse);
-            return true;
+            if(!onsiteCourse.getTime().equals(""))
+            {
+                LocalTime myObj = LocalTime.parse(onsiteCourse.getTime());
+            }
+            if(onsiteCourseDAL.updateOnsiteCourse(onsiteCourse)==1){
+                return true;
+            }else
+                return false;
         }catch (Exception e){
             return false;
         }

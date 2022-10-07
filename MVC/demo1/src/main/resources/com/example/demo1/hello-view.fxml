@@ -37,7 +37,7 @@
         </Pane>
         <AnchorPane layoutX="200.0" layoutY="90.0" prefHeight="702.0" prefWidth="1100.0">
             <children>
-                <Pane fx:id="idPanePerson" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: B1E1FF;">
+                <Pane fx:id="idPanePerson" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #ccd5ae;">
                     <children>
                         <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="ID" textAlignment="CENTER" />
                         <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Hire Date" textAlignment="CENTER" />
@@ -59,7 +59,7 @@
                         <Button layoutX="900.0" layoutY="540.0" mnemonicParsing="false" onAction="#searchPerson" prefHeight="31.0" text="search by name" />
                     </children>
                 </Pane>
-                <Pane fx:id="idPaneGoodbye" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #633A82;">
+                <Pane fx:id="idPaneGoodbye" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #e9edc9;">
                     <children>
                         <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="URL" textAlignment="CENTER" />
                         <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="ID Course" textAlignment="CENTER" />
@@ -71,7 +71,7 @@
                         <Button fx:id="idBtnDeleteOLine" layoutX="275.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleDeleteOLite" prefHeight="40.0" prefWidth="100.0" text="Delete" />
                     </children>
                 </Pane>
-                <Pane fx:id="idPaneOnsite" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #912F56;">
+                <Pane fx:id="idPaneOnsite" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #fefae0;">
                     <children>
                         <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="ID Course" textAlignment="CENTER" />
                         <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Location" textAlignment="CENTER" />
@@ -91,7 +91,7 @@
                         <Button layoutX="900.0" layoutY="600.0" mnemonicParsing="false" onAction="#searchDay" prefHeight="31.0" text="search by day" />
                     </children>
                 </Pane>
-                <Pane fx:id="idPaneIntructor" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #521945;">
+                <Pane fx:id="idPaneIntructor" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #faedcd;">
                     <children>
                         <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Title Course" textAlignment="CENTER" />
                         <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Name Person" textAlignment="CENTER" />
@@ -103,7 +103,7 @@
                         <Button fx:id="idBtnDeleteCI" layoutX="275.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleDeleteCI" prefHeight="40.0" prefWidth="100.0" text="Delete" />
                     </children>
                 </Pane>
-                <Pane fx:id="idPaneGrade" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #361F27;">
+                <Pane fx:id="idPaneGrade" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: #d4a373;">
                     <children>
                         <Label layoutX="50.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Title Course" textAlignment="CENTER" />
                         <Label layoutX="350.0" layoutY="70.0" prefHeight="31.0" prefWidth="200.0" text="Name Person" textAlignment="CENTER" />

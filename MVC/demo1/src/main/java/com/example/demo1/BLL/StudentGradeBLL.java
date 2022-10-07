@@ -8,8 +8,10 @@ public class StudentGradeBLL {
     public boolean checkInsert(StudentGrade studentGrade){
         try{
             Float.parseFloat(studentGrade.getGrade());
-            studentGradeDAL.insertStudentGrade(studentGrade);
-            return true;
+            if (studentGradeDAL.insertStudentGrade(studentGrade)==1)
+                return true;
+            else
+                return false;
         }catch (NumberFormatException e){
             return false;
         }
@@ -17,8 +19,10 @@ public class StudentGradeBLL {
     public boolean checkUpdate(StudentGrade studentGrade){
         try{
             Float.parseFloat(studentGrade.getGrade());
-            studentGradeDAL.updateStudentGrade(studentGrade);
-            return true;
+            if(studentGradeDAL.updateStudentGrade(studentGrade)==1)
+                return true;
+            else
+                return false;
         }catch (NumberFormatException e) {
             return false;
         }
