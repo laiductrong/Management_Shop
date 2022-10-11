@@ -21,7 +21,9 @@ public class OnlineCourseBLL {
         return false;
     }
     public boolean checkDelete(Integer idDelete){
-        onlineCourseDAL.deleteOnlineCourse(idDelete);
-        return true;
+        if(onlineCourseDAL.deleteOnlineCourse(idDelete)==1)
+            return true;
+        else
+            return false;
     }
 }
