@@ -28,7 +28,9 @@ public class StudentGradeBLL {
         }
     }
     public boolean checkDelete(Integer idDelete){
-        studentGradeDAL.deleteStudentGrade(idDelete);
-        return true;
+        if(studentGradeDAL.deleteStudentGrade(idDelete)==1)
+            return true;
+        else
+            return false;
     }
 }

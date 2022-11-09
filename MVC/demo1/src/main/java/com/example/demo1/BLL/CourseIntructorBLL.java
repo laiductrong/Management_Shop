@@ -18,7 +18,9 @@ public class CourseIntructorBLL {
             return false;
     }
     public boolean checkDelete(CourseInstructor courseInstructor){
-        courseInstructorDAL.deleteCourseInstructor(courseInstructor);
-        return true;
+        if(courseInstructorDAL.deleteCourseInstructor(courseInstructor)==1)
+            return true;
+        else
+            return false;
     }
 }

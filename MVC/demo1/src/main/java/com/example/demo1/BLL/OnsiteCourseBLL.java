@@ -39,7 +39,9 @@ public class OnsiteCourseBLL {
         }
     }
     public boolean checkDelete (Integer idDelete){
-        onsiteCourseDAL.deleteOnsiteCourse(idDelete);
-        return true;
+        if(onsiteCourseDAL.deleteOnsiteCourse(idDelete)==1)
+            return true;
+        else
+            return false;
     }
 }
